@@ -1,0 +1,17 @@
+<div layout="column">
+<md-whiteframe class="md-whiteframe-z1 text-center" 
+ 		layout="column" layout-align="center end" flex>
+  <md-content layout-padding>
+    <form name="userForm">
+      <md-input-container style="width: 600px;" flex>
+        <label>Name</label>
+        <input ng-model="user.address">
+      </md-input-container>
+      <md-input-container style="width: 600px" flex>
+        <label>Description</label>
+        <textarea ng-model="user.description" columns="2" md-maxlength="150"></textarea>
+      </md-input-container>
+    </form>
+  </md-content>
+ </md-whiteframe>
+</div>

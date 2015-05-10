@@ -1,0 +1,15 @@
+<md-content layout-padding ng-controller="chatCtrl"  layout = "column" layout-fill layout-align = "start center">
+  <md-list-item class="md-2-line" 
+      ng-repeat="msg in messages" style="width:80%" >
+    <img ng-src="img/dp/{{msg.guy.dp}}.jpg" class="md-avatar" />
+    <div class="md-list-item-text">
+      <h3>{{msg.guy.name}}</h3>
+      <p>{{msg.contents}}</p>
+    </div>
+    <md-divider ng-if="!$last"></md-divider>
+  </md-list-item>
+    <md-input-container style="width:50%"  offset="30">
+      <label>Say Something!</label>
+      <textarea ng-model="chat.lol" columns="2"></textarea>
+    </md-input-container>
+</md-content>

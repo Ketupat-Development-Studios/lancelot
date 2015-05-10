@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "slant";
+  src: url('slant.woff') format('woff'),
+       url('slant.ttf')  format('truetype');
+}
+
+html{
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html:focus{outline:none !important;}
+
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.float-text-left{float:left;}
+.caps{text-transform:uppercase;}
+.thin{font-weight:300;}
+.circular {
+	width: 20vw;
+	height: 20vw;
+	border-radius: 10vw;
+	-webkit-border-radius: 10vw;
+	-moz-border-radius: 10vw;
+	margin:auto;
+}
+.circle {
+	border-radius: 50%;
+	width:60%;
+	margin:auto;
+}
+.circular.medium{width: 10vw;height: 10vw;}
+
+.rating{
+	font-size:3vw;
+	margin-top:2vw;
+	margin-bottom:3vw;
+}
+
+md-sidenav.md-sidenav-left{
+	position:fixed;
+	top:64px;
+	z-index: 2;
+}
+md-toolbar.md-default-theme.topBar{position:fixed;z-index:10;}
+#stuffGoesHere{margin-top:64px;}
+div.obfuscator{
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.blur{
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+
+.profile-pic{margin-top:2vw;margin-bottom:2vw;width:50%;}
+.small-profile-pic{width:50px;border-radius: 50%;height:50px;margin:auto;}
+/*.slightly-grey{background-color:rgb(0,0,0,0.05);}*/
+.less-dark-grey{background-color:rgb(105,105,105);}
+.dark-grey{background-color:rgb(87,87,87);}
+.even-darker-grey{background-color:rgb(60,60,60) !important;}
+.no-margin{margin:0;}
+div.category{cursor:pointer;}
+div.category:hover{background-color:rgba(0,0,0,0.05);}
+.big-button{font-size:25px;}
+.bit-of-top-margin{margin-top:15px;}
+
+.clickable{cursor:pointer !important;}
+.rate-icon{font-size:15vw;}
+.rating{font-size:4vw;}
+
+.review{
+  /*margin:20px;
+  padding:1vw;*/
+  box-sizing:border-box;
+}
+.reviewer{text-transform: capitalize;margin-right:3vw;}
+.reveiwHolder{/*padding:15px;*/}
+.review-numbers{
+  padding:15px;
+}
+.review-numbers>span{
+  padding:10px;
+}
+
+/*!
+Pure v0.6.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.pure-button{display:inline-block;zoom:1;line-height:normal;white-space:nowrap;vertical-align:middle;text-align:center;cursor:pointer;-webkit-user-drag:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.pure-button::-moz-focus-inner{padding:0;border:0}.pure-button{font-family:inherit;font-size:100%;padding:.5em 1em;color:#444;color:rgba(0,0,0,.8);border:1px solid #999;border:0 rgba(0,0,0,0);background-color:#E6E6E6;text-decoration:none;border-radius:2px}.pure-button-hover,.pure-button:hover,.pure-button:focus{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);background-image:-webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));background-image:-webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));background-image:-moz-linear-gradient(top,rgba(0,0,0,.05) 0,rgba(0,0,0,.1));background-image:-o-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))}.pure-button:focus{outline:0}.pure-button-active,.pure-button:active{box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;border-color:#000\9}.pure-button[disabled],.pure-button-disabled,.pure-button-disabled:hover,.pure-button-disabled:focus,.pure-button-disabled:active{border:0;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);filter:alpha(opacity=40);-khtml-opacity:.4;-moz-opacity:.4;opacity:.4;cursor:not-allowed;box-shadow:none}.pure-button-hidden{display:none}.pure-button::-moz-focus-inner{padding:0;border:0}.pure-button-primary,.pure-button-selected,a.pure-button-primary,a.pure-button-selected{background-color:#0078e7;color:#fff}
+
+/* Materialize */
+.flow-text {
+  font-weight: 300; }
+  @media only screen and (min-width: 360px) {
+    .flow-text {
+      font-size: 1.2rem; } }
+  @media only screen and (min-width: 0px) {
+    .flow-text {
+      line-height: .8rem; } }
+  @media only screen and (min-width: 390px) {
+    .flow-text {
+      font-size: 1.224rem; } }
+  @media only screen and (min-width: 30px) {
+    .flow-text {
+      line-height: .904rem; } }
+  @media only screen and (min-width: 420px) {
+    .flow-text {
+      font-size: 1.248rem; } }
+  @media only screen and (min-width: 60px) {
+    .flow-text {
+      line-height: 1.008rem; } }
+  @media only screen and (min-width: 450px) {
+    .flow-text {
+      font-size: 1.272rem; } }
+  @media only screen and (min-width: 90px) {
+    .flow-text {
+      line-height: 1.112rem; } }
+  @media only screen and (min-width: 480px) {
+    .flow-text {
+      font-size: 1.296rem; } }
+  @media only screen and (min-width: 120px) {
+    .flow-text {
+      line-height: 1.216rem; } }
+  @media only screen and (min-width: 510px) {
+    .flow-text {
+      font-size: 1.32rem; } }
+  @media only screen and (min-width: 150px) {
+    .flow-text {
+      line-height: 1.32rem; } }
+  @media only screen and (min-width: 540px) {
+    .flow-text {
+      font-size: 1.344rem; } }
+  @media only screen and (min-width: 180px) {
+    .flow-text {
+      line-height: 1.424rem; } }
+  @media only screen and (min-width: 570px) {
+    .flow-text {
+      font-size: 1.368rem; } }
+  @media only screen and (min-width: 210px) {
+    .flow-text {
+      line-height: 1.528rem; } }
+  @media only screen and (min-width: 600px) {
+    .flow-text {
+      font-size: 1.392rem; } }
+  @media only screen and (min-width: 240px) {
+    .flow-text {
+      line-height: 1.632rem; } }
+  @media only screen and (min-width: 630px) {
+    .flow-text {
+      font-size: 1.416rem; } }
+  @media only screen and (min-width: 270px) {
+    .flow-text {
+      line-height: 1.736rem; } }
+  @media only screen and (min-width: 660px) {
+    .flow-text {
+      font-size: 1.44rem; } }
+  @media only screen and (min-width: 300px) {
+    .flow-text {
+      line-height: 1.84rem; } }
+  @media only screen and (min-width: 690px) {
+    .flow-text {
+      font-size: 1.464rem; } }
+  @media only screen and (min-width: 330px) {
+    .flow-text {
+      line-height: 1.944rem; } }
+  @media only screen and (min-width: 720px) {
+    .flow-text {
+      font-size: 1.488rem; } }
+  @media only screen and (min-width: 360px) {
+    .flow-text {
+      line-height: 2.048rem; } }
+  @media only screen and (min-width: 750px) {
+    .flow-text {
+      font-size: 1.512rem; } }
+  @media only screen and (min-width: 390px) {
+    .flow-text {
+      line-height: 2.152rem; } }
+  @media only screen and (min-width: 780px) {
+    .flow-text {
+      font-size: 1.536rem; } }
+  @media only screen and (min-width: 420px) {
+    .flow-text {
+      line-height: 2.256rem; } }
+  @media only screen and (min-width: 810px) {
+    .flow-text {
+      font-size: 1.56rem; } }
+  @media only screen and (min-width: 450px) {
+    .flow-text {
+      line-height: 2.36rem; } }
+  @media only screen and (min-width: 840px) {
+    .flow-text {
+      font-size: 1.584rem; } }
+  @media only screen and (min-width: 480px) {
+    .flow-text {
+      line-height: 2.464rem; } }
+  @media only screen and (min-width: 870px) {
+    .flow-text {
+      font-size: 1.608rem; } }
+  @media only screen and (min-width: 510px) {
+    .flow-text {
+      line-height: 2.568rem; } }
+  @media only screen and (min-width: 900px) {
+    .flow-text {
+      font-size: 1.632rem; } }
+  @media only screen and (min-width: 540px) {
+    .flow-text {
+      line-height: 2.672rem; } }
+  @media only screen and (min-width: 930px) {
+    .flow-text {
+      font-size: 1.656rem; } }
+  @media only screen and (min-width: 570px) {
+    .flow-text {
+      line-height: 2.776rem; } }
+  @media only screen and (min-width: 960px) {
+    .flow-text {
+      font-size: 1.68rem; } }
+  @media only screen and (min-width: 600px) {
+    .flow-text {
+      line-height: 2.88rem; } }
+img.responsive-image{
+	max-width: 100%;
+  	height: auto;
+}
+
+/* Angular Hero Animations */

@@ -1,0 +1,55 @@
+<md-toolbar>
+    <div class="md-toolbar-tools less-dark-grey fx-fade-down">
+    	<md-button class="md-icon-button big-button" ng-click="goBack()">
+          <i class="fa fa-angle-left"></i>
+        </md-button>
+		<h5 class="md-display-1 thin text-center no-margin"  style="padding-left: 16px;">{{freelance.category}}</h5>
+	</div>
+</md-toolbar>
+<md-content layout="column" class="text-center">
+	<div layout-sm="column" layout="row" layout-padding>
+		<div flex>
+			<img class="circle responsive-image profile-pic bit-of-top-margin" ng-src="img/dp/{{freelance.dp}}.jpg">
+		</div>
+		<div flex>
+			<h5 class="md-display-1 thin text-center no-margin">{{freelance.name}}</h5>
+			<p class="lead-text text-center">{{freelance.description}}</p>
+			<div layout="row slightly-grey" layout-padding>
+				<div class="fx-zoom-normal fx-speed-1000" layout="column" flex>
+					<div class="rate-icon" flex="33">
+						<i class="fa fa-smile-o"></i>
+						<p class="flow-text no-margin">NICENESS</p>
+					</div>
+					<div class="rating" flex="33">{{freelance.friendliness}}</div>
+				</div>
+				<div class="fx-zoom-normal fx-speed-1000" layout="column" flex>
+					<div class="rate-icon" flex="33">
+						<i class="fa fa-usd"></i>
+						<p class="flow-text no-margin">PRICE</p>
+					</div>
+					<div class="rating" flex="33">{{freelance.price}}</div>
+				</div>
+				<div class="fx-zoom-normal fx-speed-1000" layout="column" flex>
+					<div class="rate-icon" flex="33">
+						<i class="fa fa-diamond"></i>
+						<p class="flow-text no-margin">QUALITY</p>
+					</div>
+					<div class="rating" flex="33">{{freelance.quality}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="reviewHolder" layout-wrap layout-sm="column" layout="row">
+		<md-whiteframe class="md-whiteframe-z1 review fx-zoom-normal fx-speed-1000"
+			ng-repeat="review in freelance.reviews"
+			flex="50" flex-sm="100">
+    		<p class="flow-text" style="padding: 0 40 0 40; text-align: left;">{{review.body}}</p>
+    		<p class="text-right reviewer">-&nbsp;{{review.username}}</p>
+    		<div class="float-text-left review-numbers">
+    			<span><i class="fa fa-smile-o"></i>:&nbsp;{{review.friendliness_rating}}</span>
+    			<span><i class="fa fa-usd"></i>:&nbsp;{{review.price_rating}}</span>
+    			<span><i class="fa fa-diamond"></i>:&nbsp;{{review.quality_rating}}</span>
+    		</div>
+  		</md-whiteframe>
+	</div>
+</md-content>

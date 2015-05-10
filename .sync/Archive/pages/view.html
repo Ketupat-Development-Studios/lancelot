@@ -1,0 +1,21 @@
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools less-dark-grey">
+    	<md-button class="md-icon-button big-button" ng-click="goHome()">
+          <i class="fa fa-angle-left"></i>
+        </md-button>
+		<h5 class="md-display-1 thin text-center no-margin uppercase">{{curCatName}}</h5>
+	</div>
+</md-toolbar>
+<div layout="row" layout-margin layout-padding layout-wrap>
+ 	<div class="text-center fx-fade-down fx-speed-800" 
+ 		layout="column" flex-gt-sm="33" flex-sm="33"
+ 		ng-repeat="(key,job) in allJobs"
+ 		ng-click="goHireSomeone(job.free_id)">
+        <img class="circle responsive-image profile-pic bit-of-top-margin" ng-src="img/dp/{{job.free_image}}.jpg">
+    	<!--div class="circular" back-img="img/dp/{{job.free_image}}.jpg"></div>-->
+    	<h3 class="flow-text thin no-margin">{{job.free_name}}</h3>
+    	<div class="rating thin">
+    		<i class="fa fa-star" ng-repeat="i in getNumber(job.aggregate) track by $index"></i>
+    	</div>
+  	</div>
+</div>

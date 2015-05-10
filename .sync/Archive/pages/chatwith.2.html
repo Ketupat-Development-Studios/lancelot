@@ -1,0 +1,10 @@
+<md-content layout-padding ng-controller="chatCtrl">
+  <md-list-item class="md-2-line" 
+      ng-repeat="msg in messages">
+    <img ng-src="img/dp/{{msg.guy.dp}}.jpg" class="md-avatar" />
+    <div class="md-list-item-text">
+      <h3>{{msg.guy.name}}</h3>
+      <p>{{msg.contents}}</p>
+    </div>
+  </md-list-item>
+</md-content>

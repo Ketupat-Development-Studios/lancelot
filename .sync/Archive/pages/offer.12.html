@@ -1,0 +1,31 @@
+<div layout="column">
+<md-whiteframe class="md-whiteframe-z1 text-center" 
+ 		layout="column" flex>
+  <md-content layout-padding>
+    <form name="userForm">
+      <md-input-container flex>
+        <label>Name</label>
+        <input ng-model="user.address" >
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>City</label>
+          <input ng-model="user.city">
+        </md-input-container>
+        <md-input-container flex>
+          <label>State</label>
+          <input ng-model="user.state">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Postal Code</label>
+          <input ng-model="user.postalCode">
+        </md-input-container>
+      </div>
+      <md-input-container flex>
+        <label>Description</label>
+        <textarea ng-model="user.biography" columns="2" md-maxlength="150"></textarea>
+      </md-input-container>
+    </form>
+  </md-content>
+ </md-whiteframe>
+</div>

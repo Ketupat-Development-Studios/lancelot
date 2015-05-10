@@ -1,0 +1,48 @@
+<html lang="en" ng-app="freelance">
+  <head>
+    <title>LANCELOT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="minified/css/main.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <md-content ng-controller="topBarCtrl">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+            <i class="fa fa-bars"></i>
+          </md-button>
+          <h2>
+            <span>LANCELOT</span>
+          </h2>
+          <span flex></span>
+          <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-ellipsis-v"></i>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-open="$root.navBarIsThere">
+        <md-toolbar class="md-theme-indigo">
+          <h1 class="md-toolbar-tools">DESMOND ♥</h1>
+        </md-toolbar>
+        <div class="circular medium profile-pic" back-img="img/dp/lego.jpg"></div>
+        <md-content layout-padding ng-controller="LeftCtrl">
+          <md-subheader class="md-no-sticky">CURRENT</md-subheader>
+          <md-list-item class="md-2-line">
+            <img ng-src="img/dp/dog.jpg" class="md-avatar" />
+            <div class="md-list-item-text">
+              <h3>Rufferto</h3>
+              <p>Dog</p>
+            </div>
+          </md-list-item>
+        </md-content>
+      </md-sidenav>
+      <div class="obfuscator" ng-show="$root.navBarIsThere" ng-click="toggleLeft()"></div>
+    </md-content>
+    <div id="stuffGoesHere" ng-view ng-class="$root.navBarIsThere ? 'blur' : 'lel'"></div>
+    <script src="minified/js/main.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src = "/js/dynamicSearch.js"></script>
+  </body>
+</html>

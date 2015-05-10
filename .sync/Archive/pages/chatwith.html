@@ -1,0 +1,10 @@
+<div layout="row" layout-padding layout-wrap>
+ 	<div class="text-center category" 
+ 		layout="column" flex="33" flex-sm="50"  
+ 		ng-repeat="(key,cat) in allCats"
+ 		ng-click="goToCat(cat.cat_id)">
+ 		<img class="circle responsive-image" ng-src="img/categories/{{cat.cat_image}}.png">
+    	<!--<div class="circular" back-img="img/categories/{{cat.cat_image}}.png"></div>-->
+    	<h3 class="flow-text thin no-margin">{{cat.cat_name}}</h3>
+  	</div>
+</div>

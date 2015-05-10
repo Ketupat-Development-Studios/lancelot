@@ -1,0 +1,51 @@
+<md-content layout="column" layout-padding layout-margin>
+  <form name="userForm" class="text-center">
+    <md-input-container>
+      <label>Name</label>
+      <input ng-model="user.address">
+    </md-input-container>
+    <md-input-container>
+      <label>Description</label>
+      <textarea ng-model="user.description"></textarea>
+    </md-input-container>
+    <div ng-controller="SelectAsyncController">
+      <md-autocomplete ng-model="categories" md-selected-item="user.category" md-search-text="searchText" md-items="item in whatFucks(searchText)" md-item-text="item.cat_name" placeholder="Select Category">
+        <md-item-template>
+          <span md-highlight-text="searchText">{{item.cat_name}}</span>
+        </md-item-template>
+        <md-not-found>No such category found :(</md-not-found>
+      </md-autocomplete>
+    <!--<p class="flow-text">You have assigned the task to: {{ user.category ? user.category.cat_name : 'No category yet' }}</p>-->
+    </div>
+   <md-button class="md-raised text-center bit-of-top-margin">Submit</md-button>
+  </form>
+</md-content>
+<!--
+<md-whiteframe class="md-whiteframe-z1" layout="column" layout-align="center center">
+  <md-content layout-padding layout-fill>
+    <form name="userForm" layout-fill layout="column" layout-align="center center">
+      <md-input-container style="max-width: 600px;" layout-fill>
+        <label>Name</label>
+        <input ng-model="user.address" layout-fill>
+      </md-input-container>
+      <md-input-container style="max-width: 600px;" flex>
+        <label>Description</label>
+        <textarea ng-model="user.description" columns="2" md-maxlength="150"></textarea>
+      </md-input-container>
+      <br/>
+      <div layout="column" layout-align="center center" ng-controller="SelectAsyncController" style="height: 50px;" flex>
+	    <md-autocomplete ng-model="categories" md-selected-item = "user.category" md-search-text="searchText" md-items="item in whatFucks(searchText)" md-item-text="item.cat_name" placeholder="Select Category" style="max-width: 600px; width: 100%" flex="85" >
+	    	<md-item-template>
+	    		<span md-highlight-text = "searchText">{{item.cat_name}}</span>
+	    	</md-item-template>
+		    <md-not-found>
+		    No matches found.
+		    </md-not-found>
+
+	    </md-autocomplete>
+	    <p class="md-caption">You have assigned the task to: {{ user.category ? user.category.cat_name : 'No category yet' }}</p>
+	    <div> <md-button class="md-raised">Submit</md-button> </div>
+	  </div>
+    </form>
+  </md-content>
+ </md-whiteframe>-->

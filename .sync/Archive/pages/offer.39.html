@@ -1,0 +1,27 @@
+<md-whiteframe class="md-whiteframe-z1" layout="column" layout-align="center center" flex>
+  <md-content layout-padding>
+    <form name="userForm">
+      <md-input-container style="max-width: 600px;" flex="100">
+        <label>Name</label>
+        <input ng-model="user.address">
+      </md-input-container>
+      <md-input-container style="max-width: 600px;" flex="100">
+        <label>Description</label>
+        <textarea ng-model="user.description" columns="2" md-maxlength="150"></textarea>
+      </md-input-container>
+      <div layout="column" layout-align="center center" ng-controller="SelectAsyncController" style="height: 100px;">
+	    <md-autocomplete ng-model="categories" md-selected-item = "user.category" md-search-text="searchText" md-items="item in whatFucks(searchText)" md-item-text="item.cat_name" placeholder="Select Category" style="min-width: 600px;">
+	    	<md-item-template>
+	    		<span md-highlight-text = "searchText">{{item.cat_name}}</span>
+	    	</md-item-template>
+		    <md-not-found>
+		    No matches found.
+		    </md-not-found>
+
+	    </md-autocomplete>
+	    <p class="md-caption">You have assigned the task to: {{ user.category ? user.category.cat_name : 'No category yet' }}</p>
+	    <md-button class="md-raised">Submit</md-button>
+	  </div>
+    </form>
+  </md-content>
+ </md-whiteframe>
